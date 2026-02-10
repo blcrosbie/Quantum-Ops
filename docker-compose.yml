@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  quantum-lab:
+    build: .
+    container_name: quantum_ops_container
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    env_file:
+      - .env
+    restart: always
